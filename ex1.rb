@@ -30,3 +30,18 @@ if train[:direction] == "east"
 eastbound_trains << train[:train]
 end
 }
+
+def trains_in_direction(trains, direction)
+correct_trains = []
+trains.each { |train|
+if train[:direction] == direction
+correct_trains << train[:train]
+end
+}
+return correct_trains
+end
+
+puts "north trains:"
+puts trains_in_direction(trains,"north")
+puts "south trains:"
+puts trains_in_direction(trains,"east")
