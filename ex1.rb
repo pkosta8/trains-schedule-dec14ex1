@@ -16,3 +16,9 @@ trains =
 direction_first = trains[7][:direction]
 frequency_first = trains[5][:frequency_in_minutes]
 direction_second = trains[2][:direction]
+
+northbound_trains = []
+trains.each {|train|
+if train[:direction] == "north"
+northbound_trains << train[:train]
+end
