@@ -22,3 +22,11 @@ trains.each {|train|
 if train[:direction] == "north"
 northbound_trains << train[:train]
 end
+}
+
+eastbound_trains = []
+trains.each {|train|
+if train[:direction] == "east"
+eastbound_trains << train[:train]
+end
+}
