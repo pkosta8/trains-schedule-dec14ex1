@@ -11,7 +11,7 @@ trains =
 {train: "110", frequency_in_minutes: 15, direction: "north"},
 {train: "111", frequency_in_minutes: 15, direction: "south"}
 ]
-#train 111 train 80B train 610
+#train 111  80B  610
 #0-7
 direction_first = trains[7][:direction]
 frequency_first = trains[5][:frequency_in_minutes]
@@ -45,3 +45,7 @@ puts "north trains:"
 puts trains_in_direction(trains,"north")
 puts "south trains:"
 puts trains_in_direction(trains,"east")
+
+trains.first[:first_departure_time] = 6
+puts "First departure time:"
+puts trains
